@@ -57,6 +57,8 @@ def get_description():
     return "Non-parametric non-linear feature network filtering and feature generation for sparse data modelling"
 
 if __name__ == "__main__":
+    print("**** =================================== ****")
+    print(find_packages())
     setup(
         name="nphil",
         version="0.1.5",
