@@ -45,7 +45,7 @@ def make_cxx_extensions():
             'nphil._nphil',
             srcs,
             include_dirs=incdirs,
-            library_dirs=find_env_dir(dir_type="lib"),
+            library_dirs=[find_env_dir(dir_type="lib")],
             libraries=[],
             language='c++',
             extra_compile_args=cpp_extra_compile_args + ["-fvisibility=hidden"],
