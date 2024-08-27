@@ -58,7 +58,6 @@ def get_description():
 
 if __name__ == "__main__":
     print("**** =================================== ****")
-    print(find_namespace_packages(where='.'))
     setup(
         name="nphil",
         version="0.1.5",
