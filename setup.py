@@ -58,7 +58,7 @@ def get_description():
 
 if __name__ == "__main__":
     print("**** =================================== ****")
-    print(find_packages())
+    print(find_packages(where='.', exclude='nphil.cxx'))
     setup(
         name="nphil",
         version="0.1.5",
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         description="NPHIL",
         long_description=get_description(),
         scripts=get_scripts(),
-        packages=find_packages(),
+        packages=find_packages(where='.', exclude='nphil.cxx'),
         setup_requires=['pybind11>=2.4'],
         install_requires=['pybind11>=2.4', "numpy", "scipy", "scikit-learn"],
         include_package_data=True,
