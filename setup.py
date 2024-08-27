@@ -2,7 +2,7 @@ import os
 import sys
 import platform
 import glob
-from setuptools import setup, find_packages, Extension
+from setuptools import setup, find_namespace_packages, Extension
 
 class get_pybind_include(object):
     def __init__(self, user=False):
@@ -58,6 +58,7 @@ def get_description():
 
 if __name__ == "__main__":
     print("**** =================================== ****")
+    print(find_namespace_packages())
     setup(
         name="nphil",
         version="0.1.5",
@@ -67,7 +68,7 @@ if __name__ == "__main__":
         description="NPHIL",
         long_description=get_description(),
         scripts=get_scripts(),
-        packages=find_packages(),
+        packages=find_namespace_packages(),
         setup_requires=['pybind11>=2.4'],
         install_requires=['pybind11>=2.4', "numpy", "scipy", "scikit-learn"],
         include_package_data=True,
